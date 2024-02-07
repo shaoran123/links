@@ -58,5 +58,6 @@
 
     section p{
         width:40%;
+        align-content: center;
     }
 }
