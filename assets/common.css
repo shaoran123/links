@@ -1,0 +1,67 @@
+:root{
+    --font-size:20px;
+    --color:dark rgb(64, 64, 64);
+    --gutter:calc(var(--font-size)) *2;
+    --spacing:50px;
+}
+
+@media(min-width:600px){
+    :root{
+        --font-size:24px;
+    }
+
+    h1{
+        text-align: center;
+        margin: 0;
+        position: fixed;
+        top:-12vw;
+        width: 100%;
+        font-size:19vw;
+    }
+    
+    aside{
+        padding:var(--spacing);
+    }
+
+    main{
+        padding:var(--spacing);
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        font-size:calc(var(--font-size)*.6);
+        justify-content:space-between;
+        position:fixed;
+        align-content: center;
+        bottom:4vw;
+        width:90%;
+
+    }
+
+    footer{
+        display:none;
+    }
+
+    section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img{
+        height:25%;
+        width:25%;
+    }
+
+    section p{
+        width:40%;
+        align-content: center;
+    }
+
+    h2{
+        font-family:"Arimo";
+        font-weight:400;
+    }
+}

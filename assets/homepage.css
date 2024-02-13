@@ -14,20 +14,39 @@
         text-align: center;
         margin: 0;
         position: fixed;
-        top:-12vw;
+        top:-9vw;
         width: 100%;
-        font-size:19vw;
+        font-size:18vw;
+        font-family: "Chivo", sans-serif;
+        font-weight: 200;
     }
     
     aside{
         padding:var(--spacing);
     }
 
+    #channel-description{
+        padding-top: var(--font-size);
+    }
+
     main{
         padding:var(--spacing);
     }
 
-    ul{
+    main section:nth-child(1){
+        margin-bottom: var(--spacing);
+    }
+
+    #content{
+        max-width: 400px;
+        margin-top: var(--spacing);
+        padding-bottom: var(--spacing);
+        margin: 0 auto;
+        overflow-y: auto;
+        height: 50vh;
+    }
+
+    #menu{
         display: flex;
         flex-direction: row;
         font-size:calc(var(--font-size)*.6);
@@ -36,27 +55,31 @@
         align-content: center;
         bottom:4vw;
         width:90%;
+    }
 
+    h2, p{
+        font-family:"Arimo";
+        font-weight:400;
+    }
+
+    p{
+        font-size: calc(var(--font-size)*.7);
     }
 
     footer{
         display:none;
     }
 
-    section{
+    /*div{
+
+        display: grid;
+    }
+
+    #links{
         display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img{
-        height:25%;
-        width:25%;
-    }
-
-    section p{
-        width:40%;
-        align-content: center;
-    }
+        gap:var(--spacing);
+        overflow-x:auto;
+        overflow-y:hidden;
+       }*/
 }
+
