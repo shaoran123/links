@@ -33,7 +33,7 @@ main section:nth-child(1){
     margin-top: var(--font-size);
     margin: 0 auto;
     overflow-y: auto;
-    height: 50vh;
+    height: 70vh;
 }
 
 #menu{
@@ -94,7 +94,7 @@ footer{
         margin-top: var(--spacing);
         margin: 0 auto;
         overflow-y: auto;
-        height: 70vh;
+        height: 50vh;
     }
 
     #menu{
