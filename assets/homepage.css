@@ -5,6 +5,58 @@
     --spacing:50px;
 }
 
+h1{
+    text-align: center;
+    margin: 0;
+    position: fixed;
+    top:-9vw;
+    width: 100%;
+    font-size:18vw;
+    font-family: "Chivo", sans-serif;
+    font-weight: 200;
+}
+
+aside{
+    padding:var(--spacing);
+}
+
+main{
+    padding:calc(var(--font-size)*.8);
+}
+
+main section:nth-child(1){
+    margin-bottom: var(--font-size);
+}
+
+#content{
+    max-width: 400px;
+    margin-top: var(--font-size);
+    margin: 0 auto;
+    overflow-y: auto;
+    height: 50vh;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    font-size:calc(var(--font-size)*.7);
+    justify-content:space-between;
+    position:fixed;
+    align-content: center;
+    bottom:4vw;
+    width:80%;
+}
+
+h2, p{
+    font-family:"Arimo";
+    font-weight:400;
+}
+
+footer{
+    display: none;
+}
+
+
 @media(min-width:600px){
     :root{
         --font-size:24px;
@@ -30,7 +82,7 @@
     }
 
     main{
-        padding:var(--spacing);
+        padding:calc(var(--spacing)*.8);
     }
 
     main section:nth-child(1){
@@ -40,10 +92,9 @@
     #content{
         max-width: 400px;
         margin-top: var(--spacing);
-        padding-bottom: var(--spacing);
         margin: 0 auto;
         overflow-y: auto;
-        height: 50vh;
+        height: 70vh;
     }
 
     #menu{
@@ -53,7 +104,7 @@
         justify-content:space-between;
         position:fixed;
         align-content: center;
-        bottom:4vw;
+        bottom:3vw;
         width:90%;
     }
 
