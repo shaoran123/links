@@ -35,7 +35,6 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block)
 		let linkItem =
 			`
 			<li>
@@ -74,7 +73,7 @@ let renderBlock = (block) => {
 			<div>${block.content_html}</div>
 		</li>
 		`
-		//channelBlocks.insertAdjacentHTML('beforeend', textItem)
+		channelBlocks.insertAdjacentHTML('beforeend', textItem)
 		// …up to you!
 		//<p><em>Text</em></p>
 	}
@@ -106,7 +105,7 @@ let renderBlock = (block) => {
                     <iframe src="${block.attachment.url}"frameborder="0" allowfullscreen></iframe>
                 </li>
 				`
-				//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+			//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 			// …up to you!
 			//<p><em>PDF</em></p>
 		}

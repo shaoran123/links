@@ -35,7 +35,6 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block)
 		let linkItem =
 			`
 			<li>
@@ -55,13 +54,20 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
+		console.log(block)
 		let imageItem =
             `
 			<li>
-                <img src="${block.image.original.url}" alt="${block.title}">
+				<figure>
+					<img src="${block.image.original.url}" alt="${block.title}">
+				</figure>
+				<div class="block--image__description">
+					<figurecaption>${block.title}</figurecaption>
+					${block.description_html}
+				</div>
             </li>
 			`
-        //channelBlocks.insertAdjacentHTML('beforeend', imageItem);
+        channelBlocks.insertAdjacentHTML('beforeend', imageItem);
 		// …up to you!
 		//<p><em>Image</em></p>
 	}
@@ -106,7 +112,7 @@ let renderBlock = (block) => {
                     <iframe src="${block.attachment.url}"frameborder="0" allowfullscreen></iframe>
                 </li>
 				`
-				//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+			//	channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 			// …up to you!
 			//<p><em>PDF</em></p>
 		}
@@ -185,4 +191,11 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
+
+		let figure = document.querySelector('.block')
+		figure.onclick = () => {
+			let figure = figure.parentElement
+			parentBlock.classList.toggle('active')
+	}
 	})
+

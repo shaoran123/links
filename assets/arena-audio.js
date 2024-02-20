@@ -35,7 +35,6 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block)
 		let linkItem =
 			`
 			<li>
@@ -55,6 +54,7 @@ let renderBlock = (block) => {
 
 	// Images!
 	else if (block.class == 'Image') {
+        console.log(block)
 		let imageItem =
             `
 			<li>
@@ -106,7 +106,7 @@ let renderBlock = (block) => {
                     <iframe src="${block.attachment.url}"frameborder="0" allowfullscreen></iframe>
                 </li>
 				`
-				//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+			//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 			// …up to you!
 			//<p><em>PDF</em></p>
 		}
@@ -118,9 +118,10 @@ let renderBlock = (block) => {
 				`
 				<li>
 					<audio controls src="${ block.attachment.url }"></video>
+                    <p>${ block.title }</p>
 				</li>
 				`
-			//channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
 			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 			//<p><em>Audio</em></p>
 		}
@@ -136,11 +137,11 @@ let renderBlock = (block) => {
 			let linkedVideoItem =
 				`
 				<li>
-					<p><em>Linked Video</em></p>
 					${ block.embed.html }
 				</li>
 				`
 			//channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+            //<p><em>Linked Video</em></p>
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
 

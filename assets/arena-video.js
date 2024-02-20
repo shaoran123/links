@@ -35,7 +35,6 @@ let renderBlock = (block) => {
 
 	// Links!
 	if (block.class == 'Link') {
-		console.log(block)
 		let linkItem =
 			`
 			<li>
@@ -92,7 +91,7 @@ let renderBlock = (block) => {
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
-			//channelBlocks.insertAdjacentHTML('beforeend', videoItem)
+			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
 			//<p><em>Video</em></p>
 			// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
@@ -106,7 +105,7 @@ let renderBlock = (block) => {
                     <iframe src="${block.attachment.url}"frameborder="0" allowfullscreen></iframe>
                 </li>
 				`
-				//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
+			//channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 			// …up to you!
 			//<p><em>PDF</em></p>
 		}
@@ -140,7 +139,7 @@ let renderBlock = (block) => {
 					${ block.embed.html }
 				</li>
 				`
-			//channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
+			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
 
