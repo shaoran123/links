@@ -76,7 +76,42 @@ footer{
         font-family: "Chivo", sans-serif;
         font-weight: 200;
     }
+/*hover effect*/
+
+    li{
+        opacity: 0%;
+    }
     
+    li:hover{
+        opacity: 100%;
+    }
+
+    header{
+        opacity: 0%;
+    }
+    
+    header:hover{
+        opacity: 100%;
+    }
+
+    #channel-link{
+        opacity: 0%;
+    }
+    
+    #channel-link:hover{
+        opacity: 100%;
+    }
+
+    #channel-description{
+        opacity: 0%;
+    }
+    
+    #channel-description:hover{
+        opacity: 100%;
+    }
+    
+/*other elements*/
+
     aside{
         padding:var(--spacing);
     }

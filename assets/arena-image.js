@@ -57,8 +57,8 @@ let renderBlock = (block) => {
 		console.log(block)
 		let imageItem =
             `
-			<li>
-				<figure class="block--image">
+			<li class="block--image">
+				<figure>
 					<img src="${block.image.original.url}" alt="${block.title}">
 				</figure>
 				<div class="block--image__description">
@@ -192,7 +192,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 
-		let imageBlock = document.querySelectorAll('.block--image');
+		let imageBlock = document.querySelectorAll('block--image');
 			console.log(imageBlock)
 			imageBlock.forEach((block) => {
 			let figure = block.querySelector('figure')

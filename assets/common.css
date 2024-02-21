@@ -79,6 +79,51 @@ footer{
         font-weight: 200;
     }
     
+    /*hover effect*/
+
+    /*nav li{
+        opacity: 0%;
+    }
+    
+    nav li:hover{
+        opacity: 100%;
+    }
+
+    header{
+        opacity: 0%;
+    }
+    
+    header:hover{
+        opacity: 100%;
+    }
+
+    #channel-link{
+        opacity: 0%;
+    }
+    
+    #channel-link:hover{
+        opacity: 100%;
+    }
+
+    #channel-description{
+        opacity: 0%;
+    }
+    
+    #channel-description:hover{
+        opacity: 100%;
+    }
+
+    li{
+        opacity: 0%;
+    }
+    
+    li:hover{
+        opacity: 100%;
+    }
+
+/*other elements*/
+
+    
     aside{
         padding:var(--spacing);
     }
@@ -151,7 +196,7 @@ footer{
     .block--image.active .block--image__description{
         display:block;
         position:fixed;
-        background-color:white;
+        background-color:tomato;
         padding:var(--spacing);
         cursor: pointer;
     }
