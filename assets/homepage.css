@@ -93,10 +93,6 @@ footer{
         opacity: 30%;
     }
 
-    main section:nth-child(3){
-
-    }
-
     #channel-description{
         padding-top: var(--font-size);
     }

@@ -150,6 +150,10 @@ footer{
 
     .block--image.active .block--image__description{
         display:block;
+        position:fixed;
+        background-color:white;
+        padding:var(--spacing);
+        cursor: pointer;
     }
 
     /*div{

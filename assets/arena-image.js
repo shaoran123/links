@@ -63,7 +63,7 @@ let renderBlock = (block) => {
 				</figure>
 				<div class="block--image__description">
 					<figurecaption>${block.title}</figurecaption>
-					${block.description_html}
+					<p>${block.description_html}</p>
 				</div>
             </li>
 			`
@@ -192,10 +192,14 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 
-		let figure = document.querySelector('.block')
-		figure.onclick = () => {
-			let figure = figure.parentElement
+		let imageBlock = document.querySelectorAll('.block--image');
+			imageBlock.forEach((block) => {
+			let figure = block.querySelector('figure')
+			figure.onclick = () => {
+			let parentBlock = figure.parentElement
 			parentBlock.classList.toggle('active')
+		// Your stuff here!
 	}
+})
 	})
 
