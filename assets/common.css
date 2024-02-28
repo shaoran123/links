@@ -9,6 +9,13 @@ html{
     background-color: white;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1{
     text-align: center;
     margin: 0;
@@ -54,7 +61,7 @@ main section:nth-child(1){
 h2, p{
     font-family:"Arimo";
     font-weight:400;
-    line-height: 150%;;
+    line-height: 150%;
 }
 
 footer{
@@ -66,13 +73,14 @@ footer{
 @media(min-width:600px){
     :root{
         --font-size:24px;
+        --spacing:50px;
     }
 
     #cursor
     {
         position: absolute;
-        width:12px;
-        height:12px;
+        width:15px;
+        height:15px;
         background-color:black;
         transition:0.1s;
         border-radius: 50%;
@@ -90,7 +98,21 @@ footer{
         font-weight: 200;
     }
     
+    
     /*hover effect*/
+    header{
+        opacity:100%;
+
+    }
+    }
+
+    header:hover{
+        opacity:85%;
+        color: black;
+    }
+
+    a:link { color: black; } 
+    a:visited{color:black}
 
     /*nav li{
         opacity: 0%;
@@ -234,6 +256,9 @@ footer{
     /*link*/
     .block--link__description {
         display: none;
+        font-family:"Arimo";
+        font-weight:400;
+        line-height: 150%;;
     }
     
     .block--link.active .block--link__description {
@@ -274,10 +299,27 @@ footer{
     /*video*/
 
 
-     /*audio*/
+     /*text*/
+    .block-text{
+        margin-bottom: var(--font-size);
+    }
 
+    .block-text p{
+        font-size: calc(var(--font-size)*.6);
+        margin-bottom:10px;
+    }
 
+    .block-text p:hover{
+        background-color: rgb(236, 236, 236);
+        color:black;
+    }
 
+     @media(min-width:1600px){
+        :root{
+            --font-size:28px;
+            --spacing:60px;
+        }
+    
 
     /*div{
 

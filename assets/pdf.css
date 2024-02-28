@@ -1,4 +1,13 @@
-#content{
-    width:auto;
-    height:1000px;
+
+@media(min-width:600px){
+
+
+.block-pdf{
+    height:100%
+}
+
+.block-pdf iframe {
+    min-width: 100%; 
+    height: 100%;
+}
 }
