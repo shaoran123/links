@@ -43,14 +43,14 @@ main section:nth-child(1){
 #menu{
     display: flex;
     flex-direction: row;
-    font-size:calc(var(--font-size)*.7);
+    font-size:calc(var(--font-size)*.6);
     justify-content:space-between;
     position:fixed;
     align-content: center;
     bottom:4vw;
     width:80%;
     background-color: white;
-    z-index: 2;
+    z-index:2;
 }
 
 h2, p{
@@ -61,6 +61,47 @@ h2, p{
 
 footer{
     display: none;
+}
+
+@media(min-width:320px){
+    :root{
+        --font-size:20px;
+        --spacing:30px;
+    }
+
+    #menu{
+        display: flex;
+        flex-direction: row;
+        font-size:calc(var(--font-size)*.6);
+        justify-content:space-between;
+        position:fixed;
+        align-content: center;
+        bottom:5vw;
+        width:90%;
+    }
+
+    h2, p{
+        font-family:"Arimo";
+        font-weight:400;
+        line-height: 150%;;
+    }
+
+    p{
+        font-size: calc(var(--font-size)*.7);
+    }
+
+    #cursor
+    {
+        position: absolute;
+        width:15px;
+        height:15px;
+        background-color:black;
+        transition:0.1s;
+        border-radius: 50%;
+        z-index: 3;
+        
+    }
+
 }
 
  /*Desktop*/
@@ -79,7 +120,7 @@ footer{
         background-color:black;
         transition:0.1s;
         border-radius: 50%;
-        z-index: 2;
+        z-index: 3;
         
     }
 
