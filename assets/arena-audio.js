@@ -147,6 +147,7 @@ let renderBlock = (block) => {
 
 		// Linked audio!
 		else if (embed.includes('rich')) {
+            let embed = block.embed.type
 			// …up to you!
 		}
 	}

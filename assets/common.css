@@ -9,13 +9,6 @@ html{
     background-color: white;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 h1{
     text-align: center;
     margin: 0;
@@ -25,7 +18,6 @@ h1{
     font-size:18vw;
     font-family: "Chivo", sans-serif;
     font-weight: 200;
-    background-color: white;
 }
 
 aside{
@@ -86,6 +78,7 @@ footer{
         background-color:black;
         transition:0.1s;
         border-radius: 50%;
+        z-index: 2;
         
     }
 
@@ -106,7 +99,7 @@ footer{
         opacity:100%;
 
     }
-    }
+    
 
     header:hover{
         opacity:85%;
@@ -315,7 +308,7 @@ footer{
         background-color: rgb(236, 236, 236);
         color:black;
     }
-
+}
      @media(min-width:1600px){
         :root{
             --font-size:28px;
