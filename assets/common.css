@@ -68,6 +68,17 @@ footer{
         --font-size:24px;
     }
 
+    #cursor
+    {
+        position: absolute;
+        width:12px;
+        height:12px;
+        background-color:black;
+        transition:0.1s;
+        border-radius: 50%;
+        
+    }
+
     h1{
         text-align: center;
         margin: 0;
@@ -194,12 +205,33 @@ footer{
     }
 
     .block--image.active .block--image__description{
-        display:block;
-        position:fixed;
-        background-color:tomato;
-        padding:var(--spacing);
+        display:flex;
         cursor: pointer;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:var(--font-size);
+        position:fixed;
+        background-color:rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        padding:var(--spacing);
+        inset:0;
+        align-items:center;
+        justify-content: center;
+        z-index:2;
+        text-align: center;
     }
+
+    .block--image{
+        filter: grayscale(100%);
+    }
+
+    .block--image:hover{
+        filter: grayscale(0%);
+    }
+
+
+
+
 
     /*div{
 

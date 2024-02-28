@@ -186,3 +186,13 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 	})
+
+//Cursor movement//
+
+	var cursor = document.getElementById('cursor')
+	document.addEventListener('mousemove', function(e){
+		var x = e.clientX;
+		var y = e.clientY;
+		cursor.style.left = x + "px";
+		cursor.style.top = y + "px";
+	})

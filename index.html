@@ -15,8 +15,9 @@
         </head>
         <body>
             <header>
-                <a href="index.html"><h1>Minimalism</h1></a>
+                <h1>Minimalism</h1>
             </header>
+            <div id="cursor"></div>
             <aside>
                 <nav>
                     <ul id="menu">
@@ -33,14 +34,24 @@
                 <section>
                     <p><a id="channel-link">See on Are.na ↗</a></p>
                     <section id="channel-description"></section>
+                    <h3>↓</h3>
                 </section>
                 <section id="content">
                     <ul id="channel-blocks"></ul>
                     <span id="channel-count"></span>
                 </section>
-                <!--<section>
-                    <img src="Arena_Logo.png">
-                </section>-->
+                <section>
+                    <img id="alert" src="Clickhere.png">
+                    <script>
+                        
+                        let img = document.querySelector('#alert') 
+            
+                        img.onclick = () => { 
+                            alert('Hover around and check bottom options↓↓↓↓↓↓↓↓')
+                        }
+
+                    </script>
+                </section>
             </main>
             <footer>
                 <p>© Shaoran Liang · Typography & Interaction</p>

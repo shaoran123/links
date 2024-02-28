@@ -192,15 +192,23 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
 
-		let imageBlock = document.querySelectorAll('block--image');
-			console.log(imageBlock)
-			imageBlock.forEach((block) => {
-			let figure = block.querySelector('figure')
-			console.log(figure)
-			figure.onclick = () => {
-			figure.classList.toggle('active')
+		// click image //
+		let openButton = document.querySelectorAll('.block--image');
+			openButton.forEach((openButton) => {
+			openButton.onclick = () => {
+			openButton.classList.toggle('active')
 		// Your stuff here!
 	}
 })
+	})
+
+	//Cursor movement//
+
+	var cursor = document.getElementById('cursor')
+	document.addEventListener('mousemove', function(e){
+		var x = e.clientX;
+		var y = e.clientY;
+		cursor.style.left = x + "px";
+		cursor.style.top = y + "px";
 	})
 
