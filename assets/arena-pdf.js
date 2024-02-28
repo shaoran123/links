@@ -101,7 +101,7 @@ let renderBlock = (block) => {
 		else if (attachment.includes('pdf')) {
 			let pdfItem =
                 `
-				<li>
+				<li class"block-pdf">
                     <iframe src="${block.attachment.url}"frameborder="0" allowfullscreen></iframe>
                 </li>
 				`

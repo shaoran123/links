@@ -1,0 +1,7 @@
+.block-video{
+    filter: grayscale(100%);
+}
+
+.block-video:hover{
+    filter: grayscale(0%);
+}

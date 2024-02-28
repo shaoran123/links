@@ -37,19 +37,23 @@ let renderBlock = (block) => {
 	if (block.class == 'Link') {
 		let linkItem =
 			`
-			<li>
+			<li class="block--link">
 				<picture>
 					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
 					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
 					<img src="${ block.image.original.url }">
 				</picture>
-				<h3>${ block.title }</h3>
-				<p><a href="${ block.source.url }">See the original ↗</a></p>
+				<div class="block--link__description">
+					<h3>${ block.title }</h3>
+					<p><a href="${ block.source.url }">See the original ↗</a></p>
+				</div>
 			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 		//${ block.description_html }
 		//<p><em>Link</em></p>
+		//<h3>${ block.title }</h3>
+		//<p><a href="${ block.source.url }">See the original ↗</a></p>
 	}
 
 	// Images!
@@ -184,6 +188,15 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		let channelUsers = document.getElementById('channel-users') // Show them together
 		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 		renderUser(data.user, channelUsers)
+	
+		// click link //
+		let openButton = document.querySelectorAll('.block--link');
+			openButton.forEach((openButton) => {
+			openButton.onclick = () => {
+			openButton.classList.toggle('active')
+		// Your stuff here!
+	}
+})
 	})
 
 	//Cursor movement//

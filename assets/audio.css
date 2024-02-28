@@ -1,0 +1,9 @@
+.block-audio{
+    margin-top:25px;
+    opacity: 70%;
+
+}
+
+.block-audio:hover{
+    opacity: 100%;
+}
