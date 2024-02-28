@@ -110,6 +110,15 @@ footer{
     a:link { color: black; } 
     a:visited{color:black}
 
+    #content{
+        transform: scale(.2);
+        transition: transform 1s ease;
+    }
+
+    #content:hover{
+        transform: scale(1);
+    }
+
     /*nav li{
         opacity: 0%;
     }
