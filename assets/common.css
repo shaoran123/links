@@ -37,7 +37,7 @@ main section:nth-child(1){
     margin-top: var(--font-size);
     margin: 0 auto;
     overflow-y: auto;
-    height: 60vh;
+    height: 50vh;
 }
 
 #menu{
@@ -50,6 +50,7 @@ main section:nth-child(1){
     bottom:4vw;
     width:80%;
     background-color: white;
+    z-index: 2;
 }
 
 h2, p{

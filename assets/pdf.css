@@ -1,3 +1,7 @@
 .block-pdf{
     width:100%;
 }
+
+#menu li:nth-child(4) h2{
+    visibility: hidden;
+}
