@@ -25,6 +25,7 @@ h1{
     font-size:18vw;
     font-family: "Chivo", sans-serif;
     font-weight: 200;
+    background-color: white;
 }
 
 aside{
@@ -56,6 +57,7 @@ main section:nth-child(1){
     align-content: center;
     bottom:4vw;
     width:80%;
+    background-color: white;
 }
 
 h2, p{
